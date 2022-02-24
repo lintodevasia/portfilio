@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>Portfolio</title>
+
+<link href="{% static './main.d8e0d294.css' %}" rel="stylesheet"></head>
+
+<body class="">
+
+<!-- Add your content of header -->
+<div class="background-color-layer" style="background-image: url('assets/images/img-01.jpg')"
+></div>
+<main class="content-wrapper">
+  <header class="white-text-container section-container">
+    <div class="text-center">
+      <h5>Hello Everyone</h5>
+      <h1>I am Linto Devasia</h1>
+      <p>Python Developer</p>
+    </div>
+  </header>
+
+
+
+<!-- Add your site or app content here -->
+ 
+ <div class="container">
+   <div class="row">
+     <div class="col-xs-12">
+
+        <div class="card">
+          <div class="card-block">
+            <h2>About me</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <p><img src="media/pics/dp.jpg" class="img-responsive" alt="" width="300" height="200"></p>
+              </div>
+              <div class="col-md-8">
+              <p>Seeking a challenging, growth oriented position in a progressive and innovative organization, where my professional skills and constant drive towards success enables me to help further development of organization and myself</p>
+               </br>
+                <a>To download Resume click below</a></br>
+               </br>
+                <a href="media/files/Linto_Devasia_Resume.pdf" download class="btn btn-primary">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-block">
+            <h2>Projects</h2>
+            <div class="row">
+
+              {% for i in projects %}
+              <div class="col-md-4">
+                <img src="{{i.image.url}}" alt="" <canvas id="gameCanvas" width="300" height="200"></canvas>>
+                <h3 class="h5">{{i.name}}</h3>
+                <p>{{i.year}}</p>
+                <p>{{i.description}} </p>
+                <a href="{{ i.link }}" class="btn btn-primary">View</a>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-block">
+            <h2>Work</h2>
+            {% for i in exp %}
+            <div class="work-experience">
+              <small class="date"> {{ i.duration }}</small>
+              <h3 class="h5 date-title">{{ i.jobrole }} - <a href="{{ i.website }}" title="Create professionnal website">{{ i.company }}</a></h3>
+              <p>{{ i.description }}</p>
+            </div>
+             {% endfor %}
+         </div>
+        </div>
+        
+
+        <div class="card">
+          <div class="card-block">
+            <h2>Education</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <small class="date">2014-2017</small>
+                  <h3 class="h5 date-title">BSc.Electronics</h3>
+                  <p>Kannur University</p>
+                </div>
+                
+              </div>
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <small class="date">2014-2012</small>
+                  <h3 class="h5 date-title">Plus Two-Computer Science</h3>
+                  <p>Kerala State Board</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <small class="date">2011-2012</small>
+                  <h3 class="h5 date-title">SSLC</h3>
+                  <p>Kerala State Board</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-block">
+            <h2>Technical Skill</h2>
+            <div class="row">
+              {% for i in skl %}
+              <div class="col-md-4">
+                <div class="language-experience">
+                  <h3 class="h5">{{i.skills}}</h3>
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card">
+          <div class="card-block">
+            <h2>Language</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="language-experience">
+                  <h3 class="h5">English<small>-Bilingual</small></h3>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="language-experience">
+                  <h3 class="h5">Malayalam<small>-Fluent</small></h3>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="language-experience">
+                  <h3 class="h5">Hindi<small>-Beginner</small></h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        
+        <div class="card">
+          <div class="card-block">
+            <h2>Social Network</h2>
+            <div class="row">
+              <div class="col-md-3">
+                <p class="social-buttons"><a href="https://github.com/lintodevasia" title=""><span class="social-round-icon fa-icon"><i class="fa fa-github"></i></span>Linto Devasia</a></p>
+              </div>
+              <div class="col-md-3">
+                <p class="social-buttons"><a href="https://www.linkedin.com/in/linto-devasia-a3b806156" title=""><span class="social-round-icon fa-icon"><i class="fa fa-linkedin"></i></span>Linto Devasia</a></p>
+              </div>
+              <div class="col-md-3">
+                <p class="social-buttons"><a href="https://facebook.com/" title=""><span class="social-round-icon fa-icon"><i class="fa fa-facebook"></i></span>Linto Devasia</a></p>
+              </div>
+              <div class="col-md-3">
+                <p class="social-buttons"><a href="https://www.skype.com" title=""><span class="social-round-icon fa-icon"><i class="fa fa-skype"></i></span>Linto Devasia</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-block">
+            <h2>Contact</h2>
+            <div class="row">
+              <div class="col-md-3">
+                <p><span class="social-round-icon fa-icon"><i class="fa fa-envelope"></i></span>lintodevassia@gmail.com</p>
+              </div>
+              <div class="col-md-3">
+                <p><span class="social-round-icon fa-icon"><i class="fa fa-phone"></i></span>+919048233228</p>
+              </div>
+              <div class="col-md-3">
+                <p><span class="social-round-icon fa-icon"><i class="fa fa-map"></i></span>Wayanad,Kerala</p>
+              </div>
+
+              </div>
+          </div>
+        </div>
+       
+     </div>
+   </div>
+ </div>
+
+</main>
+<footer class="footer-container white-text-container text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p><img src="{% static './assets/images/mashup-icon.svg' %}" alt=""></p>
+        
+        <p>©All right reserved.Portfolio_linto_devasia</p>
+        <p>
+          <a class="fa-icon fa-icon-2x" href="https://facebook.com/" title="">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://twitter.com/" title="">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://github.com/" title="">
+            <i class="fa fa-github"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/" title="">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://gmail.com/" title="">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     scrollRevelation('.card');
+  });
+</script>
+<script type="text/javascript" src="{% static './main.bc58148c.js' %}"></script></body>
+
+</html>
